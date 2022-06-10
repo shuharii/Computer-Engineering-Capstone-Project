@@ -1,11 +1,8 @@
 import pandas as pd
 import numpy as np
-from PIL import Image,ImageDraw,ImageFont
 from pandas.core.frame import DataFrame
 import time
-from requests.api import options
 import streamlit as st
-from PIL import Image
 import requests
 from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.model_selection import train_test_split
@@ -51,6 +48,7 @@ X_train_scaled = (X_train - min_) / (max_ - min_)
 X_valid_scaled = (X_valid - min_) / (max_ - min_)
 #X_test_scaled = (X_test - min_) / (max_ - min_)
 
+'''
 stop_early = EarlyStopping(
     min_delta=0.001,              # minimium amount of change to count as an improvement
     patience=30,                  # how many epochs to wait before stopping
@@ -86,7 +84,7 @@ manuel_model.compile(
 #    callbacks=[stop_early],
 #    verbose=0,  # turn off training log
 #)
-
+'''
 
 cement = st.sidebar.slider('Cement:', 0, 1300, 25)
 st.write(cement, ' kg/m^3 cement selected.')
