@@ -44,6 +44,7 @@ manuel_model = keras.models.load_model('my_model.h5')
 
 if st.sidebar.button('Show Strength of Concrete'):
     ypred = manuel_model.predict(X_manuel_test)
-    result = (abs(float(ypred[0])) * (79.99 - 6.47)) + 6.47
+    result = (float(ypred[0]) * 73.52) + 6.47
+    
     st.title('Strength of concrete produced : ')
     st.write('Compressive strength is: ',round(result,1), ' MPa')
