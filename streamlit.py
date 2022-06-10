@@ -11,6 +11,19 @@ st.title("W E L C O M E !")
 
 st.title("Please select the concrete features you want to produce.!")
 
+url ='https://raw.githubusercontent.com/shuharii/ann-streamlit/main/concrete_data.csv'
+
+df = pd.read_csv(url)
+df = df[df['Blast Furnace Slag']==0.0]
+df.drop(['Blast Furnace Slag'], axis=1, inplace=True)
+X = df.iloc[:,:7] #Independent
+y = df.iloc[:,7] #Dependent
+#X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=0.33, random_state=42)
+
+max_ = X.max(axis=0)
+min_ = X.min(axis=0)
+
+
 cement = st.sidebar.number_input('Cement:')
 st.write(cement, ' kg/m^3 cement selected.')
 
@@ -36,9 +49,11 @@ a={'s':cement,'a':flyash,'k':water,'j':superplasticizer,'l':coarse_aggregate,'m'
 
 X_manuel_test = pd.DataFrame(data=a, index=[0])
 
+X_train_scaled = (X_manuel_test - min_) / (max_ - min_)
+
 manuel_model = keras.models.load_model('my_model.h5')
 
 if st.sidebar.button('Show Strength of Concrete'):
-    ypred = manuel_model.predict(X_manuel_test)
+    ypred = manuel_model.predict(X_train_scaled)
     st.title('Strength of concrete produced : ')
     st.title(ypred[0])
