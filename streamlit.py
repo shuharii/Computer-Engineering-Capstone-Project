@@ -32,7 +32,9 @@ st.write(fine_aggregate, ' kg/m^3 fine_aggregate selected.')
 age = st.sidebar.slider('Age',1, 1300, 1)
 st.write(fine_aggregate, ' days selected.')
 
-X_manuel_test = pd.DataFrame(cement,flyash,water,superplasticizer,coarse_aggregate,fine_aggregate,age)
+a={'s':cement,'a':flyash,'k':water,'j':superplasticizer,'l':coarse_aggregate,'m':fine_aggregate,'n':age}
+
+X_manuel_test = pd.DataFrame(data=a, index=[0])
 
 manuel_model = keras.models.load_model('my_model.h5')
 
