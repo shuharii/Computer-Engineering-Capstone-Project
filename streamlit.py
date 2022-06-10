@@ -38,7 +38,7 @@ X_manuel_test = pd.DataFrame(data=a, index=[0])
 
 manuel_model = keras.models.load_model('my_model.h5')
 
-if st.sidebar.button('Show House Price'):
+if st.sidebar.button('Show Strength of Concrete'):
     ypred = manuel_model.predict(X_manuel_test)
     st.title('Strength of concrete produced : ')
     st.title(np.round(ypred[0]))
