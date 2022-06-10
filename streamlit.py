@@ -45,7 +45,7 @@ st.write(fine_aggregate, ' kg/m^3 fine_aggregate selected.')
 age = st.sidebar.number_input('Age')
 st.write(fine_aggregate, ' days selected.')
 
-a={'s':cement,'a':flyash,'k':water,'j':superplasticizer,'l':coarse_aggregate,'m':fine_aggregate,'n':age}
+a={'Cement':cement,'Fly Ash':flyash,'Water':water,'Superplasticizer':superplasticizer,'Coarse Aggregate':coarse_aggregate,'Fine_Aggregate':fine_aggregate,'Age':age}
 
 X_manuel_test = pd.DataFrame(data=a, index=[0])
 
