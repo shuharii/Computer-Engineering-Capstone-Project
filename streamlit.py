@@ -4,7 +4,7 @@ from pandas.core.frame import DataFrame
 import time
 import streamlit as st
 import requests
-from tensorflow.keras.callbacks import EarlyStopping
+#from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.model_selection import train_test_split
 from tensorflow import keras
 from tensorflow.keras import layers
