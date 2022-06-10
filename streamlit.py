@@ -62,4 +62,4 @@ manuel_model = keras.models.load_model('my_model.h5')
 if st.sidebar.button('Show Strength of Concrete'):
     ypred = manuel_model.predict(X_manuel_test)
     st.title('Strength of concrete produced : ')
-    st.title(round(float(ypred[0]),1),' MPa')
+    st.title(round(float(ypred[0]),1))
