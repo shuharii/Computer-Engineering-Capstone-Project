@@ -5,9 +5,9 @@ import time
 import streamlit as st
 import requests
 #from tensorflow.keras.callbacks import EarlyStopping
-from sklearn.model_selection import train_test_split
+#from sklearn.model_selection import train_test_split
 from tensorflow import keras
-from tensorflow.keras import layers
+#from tensorflow.keras import layers
 from numpy.random import seed
 seed(1)
 from tensorflow import random
@@ -20,15 +20,15 @@ st.title("W E L C O M E !")
 st.title("Please select the concrete features you want to produce.!")
 
 
-concrete_data = 'https://raw.githubusercontent.com/shuharii/ann-streamlit/main/concrete_data.csv'
+#concrete_data = 'https://raw.githubusercontent.com/shuharii/ann-streamlit/main/concrete_data.csv'
 #result_data = 'https://raw.githubusercontent.com/shuharii/ann-streamlit/main/capstone_real_results.csv'
-df = pd.read_csv(concrete_data)
-df = df[df['Blast Furnace Slag']==0.0]
-df.drop(['Blast Furnace Slag'], axis=1, inplace=True)
+#df = pd.read_csv(concrete_data)
+#df = df[df['Blast Furnace Slag']==0.0]
+#df.drop(['Blast Furnace Slag'], axis=1, inplace=True)
 #Spliting into Independent and dependent variable
-X = df.iloc[:,:7] #Independent
-y = df.iloc[:,7] #Dependent
-X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=0.33, random_state=42)
+#X = df.iloc[:,:7] #Independent
+#y = df.iloc[:,7] #Dependent
+#X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=0.33, random_state=42)
 
 #df_test = pd.read_csv('sample_data/capstone_real_results.csv') #veri dataframe olarak yuklendi.
 #X_test = df_test.iloc[:,:7] #Independent
@@ -42,10 +42,10 @@ X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=0.33, rand
 #X_test_scaled = scaler.transform(X_test)
 
 # Scale to [0, 1]
-max_ = X_train.max(axis=0)
-min_ = X_train.min(axis=0)
-X_train_scaled = (X_train - min_) / (max_ - min_)
-X_valid_scaled = (X_valid - min_) / (max_ - min_)
+#max_ = X_train.max(axis=0)
+#min_ = X_train.min(axis=0)
+#X_train_scaled = (X_train - min_) / (max_ - min_)
+#X_valid_scaled = (X_valid - min_) / (max_ - min_)
 #X_test_scaled = (X_test - min_) / (max_ - min_)
 
 '''
