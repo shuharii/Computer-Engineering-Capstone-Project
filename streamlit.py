@@ -11,25 +11,25 @@ st.title("W E L C O M E !")
 
 st.title("Please select the concrete features you want to produce.!")
 
-cement = st.sidebar.slider('Cement:', 0, 1300, 25)
+cement = st.sidebar.slider('Cement:', 0, 1300, 0)
 st.write(cement, ' kg/m^3 cement selected.')
 
-flyash = st.sidebar.slider('Fly Ash', 0, 1300, 25)
+flyash = st.sidebar.slider('Fly Ash', 0, 1300, 0)
 st.write(flyash, ' kg/m^3 fly ash selected.')
 
-water = st.sidebar.slider('Water', 0, 1300, 25)
+water = st.sidebar.slider('Water', 0, 1300, 0)
 st.write(water, ' kg/m^3 water selected.')
 
-superplasticizer = st.sidebar.slider('Superplasticizer', 0, 1300, 25)
+superplasticizer = st.sidebar.slider('Superplasticizer', 0, 1300, 0)
 st.write(superplasticizer, ' kg/m^3 superplasticizer selected.')
 
-coarse_aggregate = st.sidebar.slider('Coarse Aggregate', 0, 1300, 25)
+coarse_aggregate = st.sidebar.slider('Coarse Aggregate', 0, 1300, 0)
 st.write(coarse_aggregate, ' kg/m^3 coarse_aggregate selected.')
 
-fine_aggregate = st.sidebar.slider('Fine Aggregate', 0, 1300, 25)
+fine_aggregate = st.sidebar.slider('Fine Aggregate', 0, 1300, 0)
 st.write(fine_aggregate, ' kg/m^3 fine_aggregate selected.')
 
-age = st.sidebar.slider('Age',1, 1300, 25)
+age = st.sidebar.slider('Age',1, 1300, 1)
 st.write(fine_aggregate, ' days selected.')
 
 X_manuel_test = pd.DataFrame(cement,flyash,water,superplasticizer,coarse_aggregate,fine_aggregate,age)
