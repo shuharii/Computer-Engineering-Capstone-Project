@@ -1,8 +1,10 @@
 # ann-streamlit
 
-Bahçeşehir University graduation project.
+https://share.streamlit.io/shuharii/ann-streamlit/main/streamlit.py
 
-Prediction of Compressive strength of Concrete.
+Bahçeşehir University Computer Engineering subteam graduation project.
+
+Prediction of Compressive strength of Concrete with Machine Learning/Deep Learning.
 
 The team that developed and deployed the project:
 
